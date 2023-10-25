@@ -1,0 +1,14 @@
+<center>
+<h1>Articals</h1>
+
+<ol type="1" style="list-style-position: inside;">
+<% @articles.each do |article| %>
+    <li>
+      <a href="/articles/<%= article.id %>">
+        <%= article.title %>
+      </a>
+    </li>
+<% end %>
+</ol>
+<li><%= link_to "Add new article", new_article_path %></li>
+</center>

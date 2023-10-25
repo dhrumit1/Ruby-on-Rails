@@ -1,0 +1,8 @@
+<h1 align="center"><%= @article.title %></h1>
+<p align="center"><%= @article.body %></p>
+<li align="center"><%= link_to "Edit article", edit_article_path(@article) %></li>
+<li align="center"><%= link_to "destroy", article_path(@article), data: {
+    turbo_method: :delete,
+    turbo_confirm: "Are you sure?"
+  } %></li>
+<li align="center"><%= link_to "Back to Articles", root_path %></li>
